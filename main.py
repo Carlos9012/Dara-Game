@@ -1,3 +1,4 @@
+import sys
 import tkinter as tk
 import threading
 from src.game_logic import DaraLogic
@@ -49,4 +50,13 @@ class Launcher:
             messagebox.showerror("Erro", f"Servidor não encontrado em 'localhost:{p}'")
 
 if __name__ == "__main__":
-    Launcher().root.mainloop()
+    try:
+        launcher = Launcher()
+        launcher.root.mainloop()
+    except KeyboardInterrupt:
+        # Captura o Ctrl+C e sai silenciosamente sem mostrar aquele erro gigante
+        print("\n[SISTEMA] Aplicação encerrada pelo usuário.")
+        sys.exit(0)
+    except Exception as e:
+        print(f"\n[ERRO FATAL] {e}")
+        sys.exit(1)
