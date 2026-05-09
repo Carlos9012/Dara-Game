@@ -1,0 +1,16 @@
+python main.py
+    ```
+
+3.  **Para o segundo jogador**:
+    Abra um **novo terminal**, navegue até a pasta do projeto e repita o comando de ativação que você acabou de usar:
+    
+```powershell
+    (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\Documentos\Dev\Python\dara\.venv\Scripts\Activate.ps1)
+    ```
+    Depois, rode `python main.py` novamente para abrir a segunda janela.
+
+### Dica de mestre:
+Como o seu ambiente virtual chama-se `.venv` (com ponto no início), o comando manual simples no PowerShell seria:
+`.\.venv\Scripts\Activate.ps1`
+
+Mas o comando que você usou é mais seguro pois ignora as travas de segurança do Windows temporariamente para essa janela! Se precisar de mais alguma ajuda com o código do Dara, é só chamar.
